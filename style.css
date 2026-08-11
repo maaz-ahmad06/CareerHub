@@ -287,6 +287,10 @@ input, select, button {
     gap: 1rem;
 }
 
+.nav-actions-mobile {
+    display: none;
+}
+
 .menu-toggle {
     display: none;
     font-size: 1.8rem;
