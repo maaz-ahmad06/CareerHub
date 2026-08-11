@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerHub | Find Your Dream Job Today</title>
+    <!-- Meta tags for SEO -->
+    <meta name="description" content="Discover 5000+ career opportunities with CareerHub. Connecting top talent with industry-leading companies. Remote, Full-time, and Part-time jobs.">
+    <!-- Boxicons CDN for premium icons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="loading">
+
+    <!-- ==========================================
+         PRELOADER SCREEN
+         ========================================== -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-logo">
+            <i class="bx bx-briefcase-alt-2"></i> Career<span>Hub</span>
+        </div>
+        <div class="preloader-spinner-container">
+            <div class="preloader-spinner"></div>
+            <div class="preloader-spinner-inner"></div>
+        </div>
+        <p class="preloader-text">CONNECTING OPPORTUNITIES...</p>
+    </div>
+
+    <!-- ==========================================
+         NAVIGATION HEADER
+         ========================================== -->
+    <header class="header" id="header">
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <i class="bx bx-briefcase-alt-2"></i> Career<span>Hub</span>
+            </a>
+            
+            <!-- Desktop navigation links -->
+            <nav class="nav-menu" id="navMenu">
+                <a href="#" class="nav-link active">Home</a>
+                <a href="#jobs" class="nav-link">Find Jobs</a>
+                <a href="#categories" class="nav-link">Categories</a>
+                <a href="#workflow" class="nav-link">How It Works</a>
+                <a href="#testimonials" class="nav-link">Reviews</a>
+                
+                <!-- Navigation CTA for Mobile -->
+                <div class="nav-actions-mobile">
+                    <button class="btn btn-outline">Sign In</button>
+                    <button class="btn btn-primary">Post a Job</button>
+                </div>
+            </nav>
+
+            <!-- Navigation CTA for Desktop -->
+            <div class="nav-actions">
+                <button class="btn btn-outline">Sign In</button>
+                <button class="btn btn-primary">Post a Job</button>
+            </div>
+
+            <div class="menu-toggle" id="menuToggle">
+                <i class="bx bx-menu-alt-right"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==========================================
+         HERO SECTION
+         ========================================== -->
+    <section class="hero" id="home">
+        <div class="container hero-grid">
+            <!-- Left content column -->
+            <div class="hero-content">
+                <div class="hero-tagline">
+                    <i class="bx bxs-hot"></i> Discover over 5000+ new jobs daily
+                </div>
+                <h1 class="hero-title">
+                    Find Your <span>Dream Job</span> & Build Your Future
+                </h1>
+                <p class="hero-description">
+                    We connect top talent with industry-leading companies. Search through thousands of curated job listings in technology, creative, marketing, and healthcare.
+                </p>
+
+                <!-- Search Widget -->
+                <div class="search-widget">
+                    <div class="search-field">
+                        <i class="bx bx-search"></i>
+                        <input type="text" placeholder="Job title, keywords..." id="searchTitle">
+                    </div>
+                    <div class="search-field">
+                        <i class="bx bx-map"></i>
+                        <input type="text" placeholder="City or remote..." id="searchLoc">
+                    </div>
+                    <div class="search-field">
+                        <i class="bx bx-briefcase"></i>
+                        <select id="searchCategory">
+                            <option value="">Category</option>
+                            <option value="tech">Tech & IT</option>
+                            <option value="design">Design & Art</option>
+                            <option value="marketing">Marketing</option>
+                            <option value="finance">Finance</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary" id="searchBtn">
+                        <i class="bx bx-search-alt"></i> Search
+                    </button>
+                </div>
+
+                <!-- Trust Statistics -->
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <h3>12k+</h3>
+                        <p>Active Jobs</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>8k+</h3>
+                        <p>Startup Partners</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>15k+</h3>
+                        <p>Hired Candidates</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right visual column -->
+            <div class="hero-image-wrapper">
+                <!-- Floating badge 1 -->
+                <div class="floating-badge badge-1">
+                    <div class="badge-icon">
+                        <i class="bx bx-paper-plane"></i>
+                    </div>
+                    <div class="badge-info">
+                        <h4>Application Sent</h4>
+                        <p>Successfully submitted</p>
+                    </div>
+                </div>
+
+                <!-- Main professional illustration from web -->
+                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=600&q=80" alt="Job Search Hero" class="hero-main-img">
+
+                <!-- Floating badge 2 -->
+                <div class="floating-badge badge-2">
+                    <div class="badge-icon success">
+                        <i class="bx bx-check-shield"></i>
+                    </div>
+                    <div class="badge-info">
+                        <h4>Offer Received</h4>
+                        <p>Enterprise Developer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         PARTNERS LOGO SECTION
+         ========================================== -->
+    <section class="partners">
+        <div class="container partners-logos">
+            <div class="partner-logo"><i class="bx bxl-google"></i> Google</div>
+            <div class="partner-logo"><i class="bx bxl-microsoft"></i> Microsoft</div>
+            <div class="partner-logo"><i class="bx bxl-slack-old"></i> Slack</div>
+            <div class="partner-logo"><i class="bx bxl-spotify"></i> Spotify</div>
+            <div class="partner-logo"><i class="bx bxl-airbnb"></i> Airbnb</div>
+            <div class="partner-logo"><i class="bx bxl-zoom"></i> Zoom</div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         POPULAR CATEGORIES
+         ========================================== -->
+    <section class="section reveal" id="categories">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Browse Industries</span>
+                <h2 class="section-title">Popular Job Categories</h2>
+                <p class="section-desc">Explore professional pathways in our most highly-demanded sectors. Start browsing vacancies by function.</p>
+            </div>
+
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon"><i class="bx bx-code-alt"></i></div>
+                    <h3>Tech & Software</h3>
+                    <p>1,254 Jobs Available</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon"><i class="bx bx-palette"></i></div>
+                    <h3>Design & Art</h3>
+                    <p>845 Jobs Available</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon"><i class="bx bx-trending-up"></i></div>
+                    <h3>Digital Marketing</h3>
+                    <p>512 Jobs Available</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon"><i class="bx bx-dollar-circle"></i></div>
+                    <h3>Finance & Sales</h3>
+                    <p>320 Jobs Available</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon"><i class="bx bx-health"></i></div>
+                    <h3>Healthcare</h3>
+                    <p>420 Jobs Available</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon"><i class="bx bx-support"></i></div>
+                    <h3>Support Staff</h3>
+                    <p>280 Jobs Available</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon"><i class="bx bx-edit"></i></div>
+                    <h3>Writing & Editing</h3>
+                    <p>190 Jobs Available</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon"><i class="bx bx-cog"></i></div>
+                    <h3>Engineering</h3>
+                    <p>340 Jobs Available</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         FEATURED JOBS SECTION
+         ========================================== -->
+    <section class="section featured-jobs reveal" id="jobs">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Recent Openings</span>
+                <h2 class="section-title">Featured Career Positions</h2>
+                <p class="section-desc">Hand-picked openings from our premier verified enterprise employers. Find your perfect fit below.</p>
+            </div>
+
+            <!-- Job Filters -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Jobs</button>
+                <button class="filter-btn" data-filter="full-time">Full-Time</button>
+                <button class="filter-btn" data-filter="part-time">Part-Time</button>
+                <button class="filter-btn" data-filter="remote">Remote Only</button>
+            </div>
+
+            <!-- Job Cards Grid -->
+            <div class="jobs-grid" id="jobsGrid">
+                <!-- Job Card 1 -->
+                <div class="job-card" data-category="full-time">
+                    <div class="job-header">
+                        <div class="company-info">
+                            <div class="company-logo" style="background-color: #e0f2fe; color: #0284c7; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold;">S</div>
+                            <div class="company-name">
+                                <h4>Spotify Inc.</h4>
+                                <p>Stockholm, SE</p>
+                            </div>
+                        </div>
+                        <span class="job-badge full-time">Full-Time</span>
+                    </div>
+                    <h3 class="job-title">Senior Front-End Architect</h3>
+                    <div class="job-meta">
+                        <span><i class="bx bx-briefcase"></i> Technology</span>
+                        <span><i class="bx bx-time"></i> 2 days ago</span>
+                    </div>
+                    <div class="job-footer">
+                        <div class="job-salary">$120k - $145k</div>
+                        <button class="btn btn-secondary">Apply Now</button>
+                    </div>
+                </div>
+
+                <!-- Job Card 2 -->
+                <div class="job-card" data-category="remote">
+                    <div class="job-header">
+                        <div class="company-info">
+                            <div class="company-logo" style="background-color: #fee2e2; color: #dc2626; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold;">G</div>
+                            <div class="company-name">
+                                <h4>Google LLC</h4>
+                                <p>Mountain View, USA</p>
+                            </div>
+                        </div>
+                        <span class="job-badge remote">Remote</span>
+                    </div>
+                    <h3 class="job-title">Interaction & UX Lead</h3>
+                    <div class="job-meta">
+                        <span><i class="bx bx-briefcase"></i> Product Design</span>
+                        <span><i class="bx bx-time"></i> 5 hours ago</span>
+                    </div>
+                    <div class="job-footer">
+                        <div class="job-salary">$140k - $170k</div>
+                        <button class="btn btn-secondary">Apply Now</button>
+                    </div>
+                </div>
+
+                <!-- Job Card 3 -->
+                <div class="job-card" data-category="part-time">
+                    <div class="job-header">
+                        <div class="company-info">
+                            <div class="company-logo" style="background-color: #fef3c7; color: #d97706; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold;">S</div>
+                            <div class="company-name">
+                                <h4>Slack</h4>
+                                <p>San Francisco, CA</p>
+                            </div>
+                        </div>
+                        <span class="job-badge part-time">Part-Time</span>
+                    </div>
+                    <h3 class="job-title">Associate Marketing Specialist</h3>
+                    <div class="job-meta">
+                        <span><i class="bx bx-briefcase"></i> Marketing</span>
+                        <span><i class="bx bx-time"></i> 1 day ago</span>
+                    </div>
+                    <div class="job-footer">
+                        <div class="job-salary">$60k - $80k</div>
+                        <button class="btn btn-secondary">Apply Now</button>
+                    </div>
+                </div>
+
+                <!-- Job Card 4 -->
+                <div class="job-card" data-category="full-time">
+                    <div class="job-header">
+                        <div class="company-info">
+                            <div class="company-logo" style="background-color: #ddd6fe; color: #7c3aed; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold;">F</div>
+                            <div class="company-name">
+                                <h4>Figma Inc.</h4>
+                                <p>New York, USA</p>
+                            </div>
+                        </div>
+                        <span class="job-badge full-time">Full-Time</span>
+                    </div>
+                    <h3 class="job-title">Senior Product Manager</h3>
+                    <div class="job-meta">
+                        <span><i class="bx bx-briefcase"></i> Product</span>
+                        <span><i class="bx bx-time"></i> 3 days ago</span>
+                    </div>
+                    <div class="job-footer">
+                        <div class="job-salary">$150k - $185k</div>
+                        <button class="btn btn-secondary">Apply Now</button>
+                    </div>
+                </div>
+
+                <!-- Job Card 5 -->
+                <div class="job-card" data-category="remote">
+                    <div class="job-header">
+                        <div class="company-info">
+                            <div class="company-logo" style="background-color: #ecfdf5; color: #059669; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold;">S</div>
+                            <div class="company-name">
+                                <h4>Shopify</h4>
+                                <p>Ottawa, Canada</p>
+                            </div>
+                        </div>
+                        <span class="job-badge remote">Remote</span>
+                    </div>
+                    <h3 class="job-title">Senior Full-Stack Engineer</h3>
+                    <div class="job-meta">
+                        <span><i class="bx bx-briefcase"></i> Technology</span>
+                        <span><i class="bx bx-time"></i> 6 hours ago</span>
+                    </div>
+                    <div class="job-footer">
+                        <div class="job-salary">$130k - $160k</div>
+                        <button class="btn btn-secondary">Apply Now</button>
+                    </div>
+                </div>
+
+                <!-- Job Card 6 -->
+                <div class="job-card" data-category="part-time">
+                    <div class="job-header">
+                        <div class="company-info">
+                            <div class="company-logo" style="background-color: #e0f2fe; color: #0284c7; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold;">T</div>
+                            <div class="company-name">
+                                <h4>Twitter</h4>
+                                <p>San Francisco, CA</p>
+                            </div>
+                        </div>
+                        <span class="job-badge part-time">Part-Time</span>
+                    </div>
+                    <h3 class="job-title">Social Community Manager</h3>
+                    <div class="job-meta">
+                        <span><i class="bx bx-briefcase"></i> Communications</span>
+                        <span><i class="bx bx-time"></i> 5 days ago</span>
+                    </div>
+                    <div class="job-footer">
+                        <div class="job-salary">$50k - $70k</div>
+                        <button class="btn btn-secondary">Apply Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- See More Jobs CTA -->
+            <div class="jobs-more-btn">
+                <button class="btn btn-primary">Browse All Openings <i class="bx bx-right-arrow-alt"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         HOW IT WORKS SECTION
+         ========================================== -->
+    <section class="section reveal" id="workflow">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Process Steps</span>
+                <h2 class="section-title">How CareerHub Works</h2>
+                <p class="section-desc">Find your future position in three simple, streamlined steps. It takes less than five minutes.</p>
+            </div>
+
+            <div class="workflow-steps">
+                <!-- Step 1 -->
+                <div class="step-card">
+                    <div class="step-num">01</div>
+                    <h3>Create Account</h3>
+                    <p>Sign up in seconds, verify your identity, and set up your candidate profile details.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="step-card">
+                    <div class="step-num">02</div>
+                    <h3>Upload Resume</h3>
+                    <p>Add your CV / portfolio link, define your target job scope, and let employers find you.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="step-card">
+                    <div class="step-num">03</div>
+                    <h3>Find & Apply</h3>
+                    <p>Search via keyword tags, filters, location bounds and submit your application with a single click.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         TESTIMONIALS SECTION
+         ========================================== -->
+    <section class="section testimonials reveal" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Reviews</span>
+                <h2 class="section-title">Success Stories</h2>
+                <p class="section-desc">What candidates and hiring managers have to say about finding success through CareerHub.</p>
+            </div>
+
+            <div class="testimonials-wrapper">
+                <div class="slider-container">
+                    <!-- Slide 1 -->
+                    <div class="testimonial-slide active">
+                        <div class="testimonial-rating">
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            CareerHub made searching for my next opportunity incredibly simple. I uploaded my resume and within 4 days, two recruiters reached out for developer roles. The interface is stunning and very easy to navigate.
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Sarah Connor" class="author-img">
+                            <div class="author-meta">
+                                <h4>Sarah Connor</h4>
+                                <p>Frontend Developer at Shopify</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="testimonial-slide">
+                        <div class="testimonial-rating">
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star-half"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            As a startup owner, hiring fast is critical. CareerHub matched us with perfect design candidates in under a week. The sorting and applicant review pipeline tools saved us dozens of hours of manual screening.
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="David Miller" class="author-img">
+                            <div class="author-meta">
+                                <h4>David Miller</h4>
+                                <p>CEO & Founder of TechNovum</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="testimonial-slide">
+                        <div class="testimonial-rating">
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                            <i class="bx bxs-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            I moved from traditional finance into fintech. The remote filter on CareerHub allowed me to focus on positions that suited my flexible schedule. Highly recommend to anyone changing career directions.
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80" alt="Jessica Ramirez" class="author-img">
+                            <div class="author-meta">
+                                <h4>Jessica Ramirez</h4>
+                                <p>Financial Analyst at Stripe</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <div class="slider-controls">
+                    <button class="slider-btn" id="prevSlide"><i class="bx bx-chevron-left"></i></button>
+                    <button class="slider-btn" id="nextSlide"><i class="bx bx-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         CALL TO ACTION (CTA)
+         ========================================== -->
+    <section class="cta-section reveal">
+        <div class="container cta-container">
+            <h2>Ready to Expand Your Career Potential?</h2>
+            <p>Join thousands of professionals already developing their skills and landing dream positions in modern industries globally.</p>
+            <div class="cta-actions">
+                <button class="btn btn-white">Create Account Now</button>
+                <button class="btn btn-outline-white">Consulting Services</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         FOOTER SECTION
+         ========================================== -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <!-- Brand Column -->
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <i class="bx bx-briefcase-alt-2"></i> Career<span>Hub</span>
+                </a>
+                <p>Leading the next generation of online recruitment tools, helping employers meet stellar candidates daily.</p>
+                <div class="social-links">
+                    <a href="#" class="social-btn"><i class="bx bxl-facebook"></i></a>
+                    <a href="#" class="social-btn"><i class="bx bxl-twitter"></i></a>
+                    <a href="#" class="social-btn"><i class="bx bxl-linkedin"></i></a>
+                    <a href="#" class="social-btn"><i class="bx bxl-instagram"></i></a>
+                </div>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="footer-column">
+                <h4>For Candidates</h4>
+                <div class="footer-links">
+                    <a href="#jobs">Browse Jobs</a>
+                    <a href="#categories">Browse Categories</a>
+                    <a href="#">Candidate Dashboard</a>
+                    <a href="#">Job Alerts</a>
+                </div>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="footer-column">
+                <h4>For Employers</h4>
+                <div class="footer-links">
+                    <a href="#">Post a Vacancy</a>
+                    <a href="#">Talent Sourcing</a>
+                    <a href="#">Employer Branding</a>
+                    <a href="#">Pricing Packages</a>
+                </div>
+            </div>
+
+            <!-- Column 4 -->
+            <div class="footer-column">
+                <h4>Newsletter</h4>
+                <p style="margin-bottom: 1rem; font-size: 0.9rem;">Receive weekly curated list of remote opportunities.</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault();">
+                    <div class="newsletter-input-wrapper">
+                        <input type="email" placeholder="Your email address...">
+                        <button type="submit"><i class="bx bx-paper-plane"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer Bottom Bar -->
+        <div class="container footer-bottom">
+            <p>&copy; 2026 CareerHub. All rights reserved globally.</p>
+            <div class="footer-links" style="flex-direction: row; gap: 1.5rem;">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Script file -->
+    <script src="script.js"></script>
+</body>
+</html>
