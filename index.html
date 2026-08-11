@@ -46,15 +46,15 @@
                 
                 <!-- Navigation CTA for Mobile -->
                 <div class="nav-actions-mobile">
-                    <button class="btn btn-outline">Sign In</button>
-                    <button class="btn btn-primary">Post a Job</button>
+                    <button class="btn btn-outline sign-in-btn">Sign In</button>
+                    <button class="btn btn-primary post-job-btn">Post a Job</button>
                 </div>
             </nav>
 
             <!-- Navigation CTA for Desktop -->
             <div class="nav-actions">
-                <button class="btn btn-outline">Sign In</button>
-                <button class="btn btn-primary">Post a Job</button>
+                <button class="btn btn-outline sign-in-btn">Sign In</button>
+                <button class="btn btn-primary post-job-btn">Post a Job</button>
             </div>
 
             <div class="menu-toggle" id="menuToggle">
@@ -517,7 +517,7 @@
             <h2>Ready to Expand Your Career Potential?</h2>
             <p>Join thousands of professionals already developing their skills and landing dream positions in modern industries globally.</p>
             <div class="cta-actions">
-                <button class="btn btn-white">Create Account Now</button>
+                <button class="btn btn-white sign-in-btn" data-tab-target="signup">Create Account Now</button>
                 <button class="btn btn-outline-white">Consulting Services</button>
             </div>
         </div>
@@ -586,6 +586,160 @@
             </div>
         </div>
     </footer>
+
+    <!-- ==========================================
+         SIGN IN / SIGN UP MODAL
+         ========================================== -->
+    <div class="modal-overlay" id="signInModal">
+        <div class="modal-card">
+            <button class="modal-close" id="closeSignIn" aria-label="Close modal"><i class="bx bx-x"></i></button>
+            <div class="modal-header">
+                <div class="modal-tabs">
+                    <button class="tab-btn active" data-tab="signin">Sign In</button>
+                    <button class="tab-btn" data-tab="signup">Sign Up</button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <!-- Sign In Form -->
+                <form id="signInForm" class="modal-form active" onsubmit="event.preventDefault(); alert('Signed in successfully!'); document.getElementById('signInModal').classList.remove('open');">
+                    <div class="form-group">
+                        <label for="signinEmail">Email Address</label>
+                        <div class="input-wrapper">
+                            <i class="bx bx-envelope"></i>
+                            <input type="email" id="signinEmail" placeholder="name@company.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="signinPassword">Password</label>
+                        <div class="input-wrapper">
+                            <i class="bx bx-lock-alt"></i>
+                            <input type="password" id="signinPassword" placeholder="Enter your password" required>
+                        </div>
+                    </div>
+                    <div class="form-footer">
+                        <label class="remember-me">
+                            <input type="checkbox"> Remember me
+                        </label>
+                        <a href="#" class="forgot-link">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                </form>
+
+                <!-- Sign Up Form -->
+                <form id="signUpForm" class="modal-form" onsubmit="event.preventDefault(); alert('Account created successfully!'); document.getElementById('signInModal').classList.remove('open');">
+                    <div class="form-group">
+                        <label for="signupName">Full Name</label>
+                        <div class="input-wrapper">
+                            <i class="bx bx-user"></i>
+                            <input type="text" id="signupName" placeholder="John Doe" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupEmail">Email Address</label>
+                        <div class="input-wrapper">
+                            <i class="bx bx-envelope"></i>
+                            <input type="email" id="signupEmail" placeholder="name@company.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupPassword">Password</label>
+                        <div class="input-wrapper">
+                            <i class="bx bx-lock-alt"></i>
+                            <input type="password" id="signupPassword" placeholder="Create a strong password" required>
+                        </div>
+                    </div>
+                    <div class="form-footer">
+                        <label class="remember-me">
+                            <input type="checkbox" required> I agree to the Terms & Conditions
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+                </form>
+
+                <div class="modal-divider"><span>Or continue with</span></div>
+
+                <div class="social-login-grid">
+                    <button class="btn btn-social" onclick="alert('OAuth flow initiated!');"><i class="bx bxl-google"></i> Google</button>
+                    <button class="btn btn-social" onclick="alert('OAuth flow initiated!');"><i class="bx bxl-github"></i> GitHub</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         POST A JOB MODAL
+         ========================================== -->
+    <div class="modal-overlay" id="postJobModal">
+        <div class="modal-card modal-large">
+            <button class="modal-close" id="closePostJob" aria-label="Close modal"><i class="bx bx-x"></i></button>
+            <div class="modal-header">
+                <h2>Post a New Job Opportunity</h2>
+                <p>Reach thousands of qualified candidates daily.</p>
+            </div>
+            <div class="modal-body">
+                <form id="postJobForm" class="modal-form-grid" onsubmit="event.preventDefault(); alert('Job posted successfully! It will appear shortly after review.'); document.getElementById('postJobModal').classList.remove('open');">
+                    <div class="form-group">
+                        <label for="jobTitle">Job Title</label>
+                        <div class="input-wrapper">
+                            <i class="bx bx-briefcase"></i>
+                            <input type="text" id="jobTitle" placeholder="e.g. Senior Frontend Architect" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="jobCompany">Company Name</label>
+                        <div class="input-wrapper">
+                            <i class="bx bx-buildings"></i>
+                            <input type="text" id="jobCompany" placeholder="e.g. Spotify Inc." required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="jobLoc">Location</label>
+                        <div class="input-wrapper">
+                            <i class="bx bx-map"></i>
+                            <input type="text" id="jobLoc" placeholder="e.g. Stockholm, SE or Remote" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="jobCategorySelect">Category</label>
+                        <div class="input-wrapper">
+                            <i class="bx bx-grid-alt"></i>
+                            <select id="jobCategorySelect" required>
+                                <option value="">Select Category</option>
+                                <option value="Tech & Software">Tech & Software</option>
+                                <option value="Design & Art">Design & Art</option>
+                                <option value="Digital Marketing">Digital Marketing</option>
+                                <option value="Finance & Sales">Finance & Sales</option>
+                                <option value="Healthcare">Healthcare</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="jobTypeSelect">Job Type</label>
+                        <div class="input-wrapper">
+                            <i class="bx bx-time-five"></i>
+                            <select id="jobTypeSelect" required>
+                                <option value="Full-Time">Full-Time</option>
+                                <option value="Part-Time">Part-Time</option>
+                                <option value="Remote">Remote</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="jobSalaryRange">Salary Range (Annual)</label>
+                        <div class="input-wrapper">
+                            <i class="bx bx-dollar-circle"></i>
+                            <input type="text" id="jobSalaryRange" placeholder="e.g. $120k - $145k" required>
+                        </div>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="jobDescription">Job Description</label>
+                        <textarea id="jobDescription" placeholder="Write key responsibilities, requirements, and benefits..." rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary full-width">Publish Job Opening</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <!-- Custom Script file -->
     <script src="script.js"></script>

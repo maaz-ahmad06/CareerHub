@@ -180,4 +180,84 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // ==========================================
+    // 7. MODALS INTERACTION (SIGN IN & POST A JOB)
+    // ==========================================
+    const signInModal = document.getElementById('signInModal');
+    const postJobModal = document.getElementById('postJobModal');
+    const signInBtns = document.querySelectorAll('.sign-in-btn');
+    const postJobBtns = document.querySelectorAll('.post-job-btn');
+    const closeSignIn = document.getElementById('closeSignIn');
+    const closePostJob = document.getElementById('closePostJob');
+
+    // Tab buttons and forms in Sign In modal
+    const tabBtns = document.querySelectorAll('#signInModal .tab-btn');
+    const forms = document.querySelectorAll('#signInModal .modal-form');
+
+    // Toggle Sign In / Sign Up tab
+    function switchTab(tabName) {
+        tabBtns.forEach(btn => {
+            if (btn.getAttribute('data-tab') === tabName) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        });
+
+        forms.forEach(form => {
+            if (form.id === `${tabName}Form`) {
+                form.classList.add('active');
+            } else {
+                form.classList.remove('active');
+            }
+        });
+    }
+
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            switchTab(btn.getAttribute('data-tab'));
+        });
+    });
+
+    // Open Sign In Modal
+    signInBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const targetTab = btn.getAttribute('data-tab-target') || 'signin';
+            switchTab(targetTab);
+            signInModal.classList.add('open');
+            body.style.overflow = 'hidden'; // Disable page scrolling
+        });
+    });
+
+    // Open Post a Job Modal
+    postJobBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            postJobModal.classList.add('open');
+            body.style.overflow = 'hidden'; // Disable page scrolling
+        });
+    });
+
+    // Close Modals function
+    function closeModal(modal) {
+        modal.classList.remove('open');
+        body.style.overflow = ''; // Re-enable page scrolling
+    }
+
+    if (closeSignIn) {
+        closeSignIn.addEventListener('click', () => closeModal(signInModal));
+    }
+    if (closePostJob) {
+        closePostJob.addEventListener('click', () => closeModal(postJobModal));
+    }
+
+    // Close on click outside modal-card
+    window.addEventListener('click', (e) => {
+        if (e.target === signInModal) {
+            closeModal(signInModal);
+        }
+        if (e.target === postJobModal) {
+            closeModal(postJobModal);
+        }
+    });
 });

@@ -1407,3 +1407,291 @@ input, select, button {
         text-align: center;
     }
 }
+
+/* ==========================================
+   MODALS STYLING
+   ========================================== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-card {
+    background-color: var(--white);
+    border-radius: 20px;
+    width: 90%;
+    max-width: 480px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 2.5rem;
+    position: relative;
+    box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.25);
+    transform: scale(0.9);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-large {
+    max-width: 680px;
+}
+
+.modal-overlay.open .modal-card {
+    transform: scale(1);
+}
+
+.modal-close {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    font-size: 1.5rem;
+    color: var(--dark-muted);
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light);
+    transition: var(--transition);
+    border: none;
+    outline: none;
+}
+
+.modal-close:hover {
+    background-color: var(--primary-light);
+    color: var(--primary);
+    transform: rotate(90deg);
+}
+
+/* Modal Tabs */
+.modal-tabs {
+    display: flex;
+    border-bottom: 2px solid var(--border-color);
+    margin-bottom: 2rem;
+}
+
+.tab-btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.75rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--dark-muted);
+    cursor: pointer;
+    position: relative;
+    transition: var(--transition);
+}
+
+.tab-btn::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary);
+    transition: var(--transition);
+}
+
+.tab-btn.active {
+    color: var(--primary);
+}
+
+.tab-btn.active::after {
+    width: 100%;
+}
+
+/* Form Styles */
+.modal-form {
+    display: none;
+}
+
+.modal-form.active {
+    display: block;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group.full-width {
+    grid-column: span 2;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-wrapper i {
+    position: absolute;
+    left: 1rem;
+    color: var(--dark-muted);
+    font-size: 1.2rem;
+    pointer-events: none;
+    transition: var(--transition);
+}
+
+.input-wrapper input,
+.input-wrapper select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 2.75rem;
+    border: 1.5px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background-color: var(--light);
+    color: var(--dark);
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+.form-group textarea {
+    padding: 0.75rem 1rem;
+}
+
+.input-wrapper select {
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.input-wrapper input:focus,
+.input-wrapper select:focus,
+.form-group textarea:focus {
+    border-color: var(--primary);
+    background-color: var(--white);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+.input-wrapper input:focus + i {
+    color: var(--primary);
+}
+
+/* Form Footer */
+.form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--dark-muted);
+}
+
+.forgot-link {
+    color: var(--primary);
+    font-weight: 500;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+/* Divider */
+.modal-divider {
+    text-align: center;
+    margin: 1.5rem 0;
+    position: relative;
+}
+
+.modal-divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--border-color);
+    z-index: 1;
+}
+
+.modal-divider span {
+    background-color: var(--white);
+    padding: 0 1rem;
+    position: relative;
+    z-index: 2;
+    font-size: 0.85rem;
+    color: var(--dark-muted);
+    font-weight: 500;
+}
+
+/* Social Login Grid */
+.social-login-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.btn-social {
+    border: 1.5px solid var(--border-color);
+    background-color: var(--white);
+    color: var(--dark);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.btn-social:hover {
+    background-color: var(--light);
+    border-color: var(--dark-muted);
+}
+
+/* Post Job Form Grid */
+.modal-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+}
+
+/* Responsive adjustment for forms */
+@media (max-width: 600px) {
+    .modal-card {
+        padding: 1.75rem;
+    }
+    
+    .modal-form-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .form-group.full-width {
+        grid-column: span 1;
+    }
+}
+
